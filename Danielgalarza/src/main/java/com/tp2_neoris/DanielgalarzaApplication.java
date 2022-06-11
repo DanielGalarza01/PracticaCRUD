@@ -10,6 +10,8 @@ public class DanielgalarzaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DanielgalarzaApplication.class, args);
+		
+		System.out.println("SERVER INICIADO");
 	}
 
 }

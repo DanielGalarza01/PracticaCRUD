@@ -1,14 +1,17 @@
 package com.tp2_neoris.entity;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+
 
 @Entity
+@JsonSerialize
 public class ClienteEntity implements Serializable{
 	
 	private static final long serialVersionUID = 5551500470600610698L;
@@ -30,6 +33,19 @@ public class ClienteEntity implements Serializable{
 	private boolean habilitado;
 
 
+
+	public ClienteEntity(Long id, String nombre, String apellido, int dni, boolean habilitado) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.dni = dni;
+		this.habilitado = habilitado;
+	}
+
+	public ClienteEntity() {
+		super();
+	}
 
 	public String getNombre() {
 		return nombre;

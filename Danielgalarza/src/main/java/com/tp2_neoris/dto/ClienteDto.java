@@ -1,13 +1,12 @@
-package com.tp2_neoris.model;
+package com.tp2_neoris.dto;
 
-public class ClienteModel {
+public class ClienteDto {
 	
 	private String nombre;
 	private String apellido;
 	private int dni;
 	private boolean habilitado;
-	
-	
+		
 	public String getNombre() {
 		return nombre;
 	}
@@ -31,7 +30,5 @@ public class ClienteModel {
 	}
 	public void setHabilitado(boolean habilitado) {
 		this.habilitado = habilitado;
-	}
-
-	
+	}	
 }
