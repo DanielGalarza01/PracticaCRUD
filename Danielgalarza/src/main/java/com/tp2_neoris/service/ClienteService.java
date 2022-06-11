@@ -3,6 +3,8 @@ package com.tp2_neoris.service;
 
 
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +52,10 @@ public class ClienteService {
 		return respuestaDto;
 	}
 	
-	
+	public ArrayList<RespuestaDto> getListaClientes(){
+		ArrayList<RespuestaDto> listaClientes = new ArrayList<RespuestaDto>();
+		return null;
+	}
 	
 	
 	

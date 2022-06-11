@@ -3,6 +3,7 @@ package com.tp2_neoris.controller;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Id;
@@ -37,15 +38,15 @@ public class ClienteController {
 	}
 	
 	@GetMapping(value="/showCliente/{id}")
-		public @ResponseBody RespuestaDto getClienteById(@PathVariable Long id) {
+		public @ResponseBody RespuestaDto getClienteById(@PathVariable("id") Long id) {
 		RespuestaDto respuestaDto = clienteService.getClienteById(id);
 		return respuestaDto;
 	}
 	
-	/*@GetMapping(value="showLIstaClientes")
-		public @ResponseBody List<RespuestaDto> getListaClientes(){
-		return list<respuestaDto>;
-	}*/
+	@GetMapping(value="showListaClientes")
+		public @ResponseBody ArrayList<RespuestaDto> getListaClientes(){
+		return clienteService.getListaClientes();
+	}
 
 }
 
