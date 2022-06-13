@@ -1,10 +1,5 @@
 package com.tp2_neoris.service;
 
-
-
-
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,13 +47,18 @@ public class ClienteService {
 		return respuestaDto;
 	}
 	
-	public ArrayList<RespuestaDto> getListaClientes(){
-		ArrayList<RespuestaDto> listaClientes = new ArrayList<RespuestaDto>();
-		return null;
+	/*public RespuestaDto getListaClientes(){
+		ArrayList<ClienteEntity> listaClientes = (ArrayList<ClienteEntity>) clienteRepository.findAll();
+		return this.generarListaDto(listaClientes);
+	}*/
+	
+	public RespuestaDto getListaClientes() {
+		RespuestaDto respuestaDto = new RespuestaDto();
+		respuestaDto.setCodigo(200);
+		respuestaDto.setMensaje(" ");
+		respuestaDto.setData(clienteRepository.findAll());
+		return respuestaDto;
 	}
-	
-	
-	
 	
 	
 	
